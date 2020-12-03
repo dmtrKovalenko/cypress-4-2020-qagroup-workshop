@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/dmtrKovalenko/cypress-4-2020-qagroup-workshop#readme",
   "dependencies": {
+    "cypress-real-events": "^1.1.0",
     "typescript": "^4.1.2"
+  },
+  "devDependencies": {
+    "cypress": "^6.0.1"
   }
 }
