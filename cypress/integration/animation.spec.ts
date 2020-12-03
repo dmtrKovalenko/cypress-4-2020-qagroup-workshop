@@ -4,6 +4,7 @@ describe("Animation", () => {
   })
 
   it("Shows animation", () => {
+    cy.viewport("iphone-x")
     cy.get("[data-testid=motion]").should("have.css", "border-radius", "50%")
     cy.get("[data-testid=motion]").should("have.css", "border-radius", "20%")
   })

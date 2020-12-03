@@ -1,4 +1,4 @@
-describe("Qa Group", () => {
+describe("Qa Group", { browser: "firefox" }, () => {
   beforeEach(() => {
     cy.visit("https://qagroup.com.ua/");
   });
@@ -10,7 +10,6 @@ describe("Qa Group", () => {
   });
 
   it("Open webinar page", () => {
-    cy.contains("a", "Події").click();
     cy.contains(
       "Вокршоп: Тестова стратегія як інструмент досягнення цілей QA (Online)"
     ).click();
@@ -19,6 +18,7 @@ describe("Qa Group", () => {
   it("Searches for webinar", () => {
     cy.get("input[name=q]").type("Тестова стратегія як інструмент");
     cy.contains("button", "Шукати").click();
+
     cy.contains(
       "a",
       "Вокршоп: Тестова стратегія як інструмент досягнення цілей QA (Online)"
@@ -26,8 +26,8 @@ describe("Qa Group", () => {
   });
 
   it("can type into search", () => {
-    cy.get("input[name=q]").click()
-    cy.realPress("Tab")
-    cy.realPress("Space")
+    cy.get("input[name=q]").click();
+    cy.realPress("Tab");
+    cy.realPress("Space");
   });
 });
